@@ -1,101 +1,116 @@
 
 // 1-misol
-let ism = prompt("Ismingizni kiriting:");
-let natija = ism.charAt(0).toUpperCase() + ism.slice(1).toLowerCase();
-console.log(natija);
+let ism1 = prompt("Ismingizni kiriting:");
+ism1 = ism1.trim().toLowerCase();
+let javob1 = ism1.charAt(0).toUpperCase() + ism1.slice(1);
+console.log(javob1);
 
 
 // 2-misol
-let email = prompt("Email manzilingizni kiriting:");
+let email2 = prompt("Email kiriting:");
 
-if (email.includes("@")) {
-    console.log(email.toLowerCase());
+if (email2.includes("@")) {
+    console.log(email2.toLowerCase());
 } else {
-    console.log("Email manzili noto'g'ri!");
+    console.log("Email xato");
 }
 
 
 // 3-misol
-let ismFamiliya = prompt("Ism va familiyangizni kiriting:").trim();
-let joy = ismFamiliya.indexOf(" ");
+let ism3 = prompt("Ism va familiya kiriting:");
+ism3 = ism3.trim();
 
-if (joy !== -1) {
-    console.log(ismFamiliya.slice(0, joy));
-    console.log(ismFamiliya.slice(joy + 1).trim());
+let joy3 = ism3.indexOf(" ");
+
+if (joy3 != -1) {
+    console.log("Ism: " + ism3.slice(0, joy3));
+    console.log("Familiya: " + ism3.slice(joy3 + 1).trim());
 } else {
-    console.log("Ism va familiyani kiriting");
+    console.log("Xato");
 }
 
 
 // 4-misol
-let matn = prompt("Matn kiriting:");
+let matn4 = prompt("Matn kiriting:");
 
-if (matn.length > 20) {
-    console.log(matn.slice(0, 20) + "...");
+if (matn4.length > 20) {
+    console.log(matn4.slice(0, 20) + "...");
 } else {
-    console.log(matn);
+    console.log(matn4);
 }
 
 
 // 5-misol
-let sozlar = prompt("Gap kiriting:").trim();
-sozlar = sozlar.replaceAll("  ", " ");
-sozlar = sozlar.replaceAll("  ", " ");
-sozlar = sozlar.replaceAll("  ", " ");
-sozlar = sozlar.replaceAll("  ", " ");
+let gap5 = prompt("Gap kiriting:");
+gap5 = gap5.trim();
 
-if (sozlar === "") {
-    console.log(0);
+gap5 = gap5.replaceAll("  ", " ");
+gap5 = gap5.replaceAll("  ", " ");
+gap5 = gap5.replaceAll("  ", " ");
+gap5 = gap5.replaceAll("  ", " ");
+gap5 = gap5.replaceAll("  ", " ");
+gap5 = gap5.replaceAll("  ", " ");
+
+if (gap5 == "") {
+    console.log("0 ta so'z");
 } else {
-    console.log(sozlar.length - sozlar.replaceAll(" ", "").length + 1);
+    let son5 = gap5.length - gap5.replaceAll(" ", "").length + 1;
+    console.log(son5 + " ta so'z");
 }
 
 
 // 6-misol
-let raqam = prompt("Telefon raqamini kiriting:");
-raqam = raqam.replaceAll("+", "").replaceAll(" ", "").replaceAll("-", "");
+let tel6 = prompt("Telefon raqamini kiriting:");
 
-if (raqam.startsWith("998")) {
-    raqam = raqam.slice(3);
-}
-
-if (raqam.length === 9) {
-    console.log("+998 " + raqam.slice(0, 2) + " " + raqam.slice(2, 5) + " " + raqam.slice(5, 7) + " " + raqam.slice(7));
+if (tel6.length == 12 && tel6.startsWith("998")) {
+    console.log("+998 " + tel6.slice(3, 5) + " " + tel6.slice(5, 8) + " " + tel6.slice(8, 10) + " " + tel6.slice(10, 12));
 } else {
-    console.log("Noto'g'ri raqam");
+    console.log("Raqam xato");
 }
 
 
 // 7-misol
-let matn2 = prompt("Matn kiriting:").trim();
-matn2 = matn2.replaceAll("  ", " ");
-matn2 = matn2.replaceAll("  ", " ");
-matn2 = matn2.replaceAll("  ", " ");
-matn2 = matn2.replaceAll("  ", " ");
-console.log(matn2);
+let matn7 = prompt("Matn kiriting:");
+
+matn7 = matn7.trim();
+matn7 = matn7.replaceAll("  ", " ");
+matn7 = matn7.replaceAll("  ", " ");
+matn7 = matn7.replaceAll("  ", " ");
+matn7 = matn7.replaceAll("  ", " ");
+matn7 = matn7.replaceAll("  ", " ");
+matn7 = matn7.replaceAll("  ", " ");
+
+console.log(matn7);
 
 
 // 8-misol
-let fayl = prompt("Fayl nomini kiriting:");
-let nuqta = fayl.lastIndexOf(".");
+let fayl8 = prompt("Fayl nomini kiriting:");
+let joy8 = fayl8.lastIndexOf(".");
 
-if (nuqta !== -1) {
-    console.log(fayl.slice(nuqta + 1).toLowerCase());
+if (joy8 != -1) {
+    console.log(fayl8.slice(joy8 + 1).toLowerCase());
 } else {
-    console.log("Kengaytma topilmadi");
+    console.log("Kengaytma yo'q");
 }
 
 
 // 9-misol
-let fio = prompt("Ism, ota ismi va familiyangizni kiriting:").trim();
-let joy1 = fio.indexOf(" ");
-let joy2 = fio.lastIndexOf(" ");
+let fio9 = prompt("Ism ota ismi familiya kiriting:");
+fio9 = fio9.trim().toLowerCase();
 
-if (joy1 !== -1 && joy2 !== -1 && joy1 !== joy2) {
+fio9 = fio9.replaceAll("  ", " ");
+fio9 = fio9.replaceAll("  ", " ");
+fio9 = fio9.replaceAll("  ", " ");
+fio9 = fio9.replaceAll("  ", " ");
+
+let joy9 = fio9.indexOf(" ");
+let joya9 = fio9.lastIndexOf(" ");
+
+if (joy9 != -1 && joya9 != joy9) {
     console.log(
-        fio.charAt(0).toUpperCase() + "." +
-        fio.charAt(joy1 + 1).toUpperCase() + "." +
-        fio.charAt(joy2 + 1).toUpperCase() + "."
+        fio9.charAt(0).toUpperCase() + "." +
+        fio9.charAt(joy9 + 1).toUpperCase() + "." +
+        fio9.charAt(joya9 + 1).toUpperCase() + "."
     );
 } else {
     console.log("Uchta so'z kiriting");
@@ -103,106 +118,69 @@ if (joy1 !== -1 && joy2 !== -1 && joy1 !== joy2) {
 
 
 // 10-misol
-let gap = prompt("Gap kiriting:");
-console.log(gap.replaceAll("yomon", "yaxshi"));
+let gap10 = prompt("Gap kiriting:");
+
+console.log(gap10.replaceAll("yomon", "yaxshi"));
 
 
 // 11-misol
-let ism = prompt("Ismingizni kiriting:");
-console.log(ism.trim().toLowerCase().replaceAll(" ", "") + "2026");
+let ism11 = prompt("Ism va familiyangizni kiriting:");
+
+ism11 = ism11.trim().toLowerCase();
+ism11 = ism11.replaceAll(" ", "");
+
+console.log(ism11 + "2026");
 
 
 // 12-misol
-let soz = prompt("So'z kiriting:");
+let soz12 = prompt("So'z kiriting:");
+soz12 = soz12.toLowerCase();
 
-if (soz.length > 0 && soz.charAt(0).toLowerCase() === soz.charAt(soz.length - 1).toLowerCase()) {
-    console.log("Bir xil");
+if (soz12.length > 0 && soz12.charAt(0) == soz12.charAt(soz12.length - 1)) {
+    console.log("Birinchi va oxirgi harf bir xil.");
 } else {
-    console.log("Har xil");
+    console.log("Birinchi va oxirgi harf bir xil emas.");
 }
 
 
 // 13-misol
-let email = prompt("Email kiriting:").trim();
-let belgi = email.indexOf("@");
+let email13 = prompt("Email kiriting:");
+let belgi13 = email13.indexOf("@");
 
-if (belgi > 1 && email.indexOf(".", belgi) !== -1) {
-    console.log(email.slice(0, 2) + "****" + email.slice(belgi));
+if (belgi13 > 1) {
+    console.log(email13.slice(0, 2) + "****" + email13.slice(belgi13));
 } else {
-    console.log("Email noto'g'ri");
+    console.log("Email xato");
 }
 
 
 // 14-misol
-let matn3 = prompt("Matn kiriting:");
-let harf = prompt("Harf kiriting:");
+let matn14 = prompt("Matn kiriting:");
+let harf14 = prompt("Harf kiriting:");
 
-if (harf.length === 1) {
-    console.log(matn3.length - matn3.replaceAll(harf, "").length);
+if (harf14.length == 1) {
+    console.log(matn14.length - matn14.replaceAll(harf14, "").length);
 } else {
     console.log("Bitta harf kiriting");
 }
 
 
 // 15-misol
-let sayt = prompt("Matn kiriting:").toLowerCase();
+let mahsulot15 = prompt("Mahsulot nomini kiriting:");
+mahsulot15 = mahsulot15.toLowerCase();
 
-if (sayt.startsWith("phone")) {
-    console.log("Ha");
+if (mahsulot15.startsWith("phone")) {
+    console.log("Telefon mahsuloti");
 } else {
-    console.log("Yo'q");
+    console.log("Boshqa mahsulot");
 }
 
 
 // 16-misol
-let parol = prompt("Parol kiriting:");
+let parol16 = prompt("Parol kiriting:");
 
-if (parol.length >= 8 && !parol.includes(" ") && parol === parol.trim()) {
-    console.log("Parol to'g'ri");
+if (parol16.length >= 8 && !parol16.includes(" ") && parol16 == parol16.trim()) {
+    console.log("Parol qabul qilindi");
 } else {
-    console.log("Parol noto'g'ri");
-}
-
-
-// 17-misol (eski 18-misol)
-let soz2 = prompt("So'z kiriting:");
-
-if (soz2.length % 2 === 0) {
-    console.log(soz2.slice(soz2.length / 2 - 1, soz2.length / 2 + 1));
-} else {
-    console.log(soz2.slice((soz2.length - 1) / 2, (soz2.length + 1) / 2));
-}
-
-
-// 18-misol (eski 19-misol)
-let url = prompt("Sayt manzilini kiriting:").trim().toLowerCase();
-url = url.replace("https://", "").replace("http://", "");
-
-if (url.endsWith("/")) {
-    url = url.slice(0, -1);
-}
-
-console.log(url);
-
-
-// 19-misol (eski 20-misol)
-let ismFam = prompt("Ism va familiyangizni kiriting:").trim().toLowerCase();
-ismFam = ismFam.replaceAll("  ", " ");
-ismFam = ismFam.replaceAll("  ", " ");
-ismFam = ismFam.replaceAll("  ", " ");
-ismFam = ismFam.replaceAll("  ", " ");
-
-let birJoy = ismFam.indexOf(" ");
-let oxirJoy = ismFam.lastIndexOf(" ");
-
-if (birJoy !== -1) {
-    let ism2 = ismFam.slice(0, birJoy);
-    let familiya = ismFam.slice(oxirJoy + 1);
-
-    ism2 = ism2.charAt(0).toUpperCase() + ism2.slice(1);
-    familiya = familiya.charAt(0).toUpperCase() + familiya.slice(1);
-
-    console.log(ism2 + " " + familiya);
-} else {
-    console.log("Ism va familiyani kiriting");
+    console.log("Parol talabga javob bermaydi");
 }
